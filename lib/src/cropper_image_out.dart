@@ -16,9 +16,9 @@ Future<ui.Image> outImage({
 
   var temp = outHeight / (bottom - top);
 
-  canvas.translate(outWidth / 2 + drawX, outHeight / 2 + drawY * temp);
+  canvas.translate(outWidth / 2 + drawX * temp, outHeight / 2 + drawY * temp);
   canvas.rotate(rotate1);
-  canvas.scale(scale * temp);
+  canvas.scale(scale * temp * 1.05);
   canvas.drawImage(
       image, ui.Offset(-image.width / 2, -image.height / 2), ui.Paint());
 
